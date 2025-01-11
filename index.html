@@ -7,16 +7,14 @@
     <title>Fetch API Data</title>
   </head>
   <body>
-    <div>Trial 6</div>
+    <div>Trial 7</div>
     <script>
       const proxyUrl = 'https://corsproxy.io/?key=a809c415&url=';
-      const proxyUrl2 = '';
       const targetUrl = 'https://hourlypricing.comed.com/api?type=5minutefeed'; 
-      const hUrl = 'https://cors-proxy.htmldriven.com/?url=https://hourlypricing.comed.com/api?type=5minutefeed';
 
       fetch(proxyUrl + targetUrl) 
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => console.log(data[0].price))
         .catch(error => console.error('Error fetching data:', error));
     </script>
   </body>
