@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!--  https://corsproxy.io/?key=a809c415&url=https://example.com -->
-    <!-- https://code.jquery.com/jquery-3.7.1.js  -->
-    <!-- https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js  -->
+    
     <title>Fetch API Data</title>
   </head>
   <body>
-    <div>Trial 7</div>
+    <div>Trial 8</div>
+    <!-- keys (millisUTC, price)  -->
     <script>
       const proxyUrl = 'https://corsproxy.io/?key=a809c415&url=';
       const targetUrl = 'https://hourlypricing.comed.com/api?type=5minutefeed'; 
+      
 
       fetch(proxyUrl + targetUrl) 
         .then(response => response.json())
         .then(data => console.log(data[0].price))
+        .then(data => console.log(data[0].millisUTC))
         .catch(error => console.error('Error fetching data:', error));
     </script>
   </body>
