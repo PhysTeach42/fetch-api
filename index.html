@@ -5,7 +5,7 @@
     <title>Fetch API Data</title>
   </head>
   <body>
-    <div>Trial 14</div>
+    <div>Trial 15</div>
     <!-- keys (millisUTC, price)  -->
     <div ID = "time"></div>
     <div ID = "price"></div>
@@ -18,12 +18,12 @@
 
       fetch(proxyUrl + targetUrl) 
         .then(response => response.json())
-        .then(data => time = JSON.stringify(data[0].millisUTC), price = JSON.strinfigy(data[0].price))
+        .then(data => document.getElementById('time').innerHTML = JSON.stringify(data[0].millisUTC), document.getElementById('price').innerHTML = JSON.strinfigy(data[0].price))
         
         
         .catch(error => console.error('Error fetching data:', error));
-      document.getElementById('time').innerHTML = time;
-      document.getElementById('price').innerHTML = price;
+      
+      
     </script>
   </body>
 </html>
