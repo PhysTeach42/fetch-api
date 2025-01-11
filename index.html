@@ -5,7 +5,7 @@
     <title>Fetch API Data</title>
   </head>
   <body>
-    <div>Trial 11</div>
+    <div>Trial 12</div>
     <!-- keys (millisUTC, price)  -->
     <script>
       const proxyUrl = 'https://corsproxy.io/?key=a809c415&url=';
@@ -16,7 +16,7 @@
 
       fetch(proxyUrl + targetUrl) 
         .then(response => response.json())
-        .then(data => console.log(data[0].millisUTC, data[0].price))
+        .then(val => console.log(val[0].millisUTC, val[0].price))
         
         
         .catch(error => console.error('Error fetching data:', error));
