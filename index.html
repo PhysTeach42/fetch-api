@@ -5,8 +5,10 @@
     <title>Fetch API Data</title>
   </head>
   <body>
-    <div>Trial 12</div>
+    <div>Trial 13</div>
     <!-- keys (millisUTC, price)  -->
+    <div ID = "time"></div>
+    <div ID = "price"></div>
     <script>
       const proxyUrl = 'https://corsproxy.io/?key=a809c415&url=';
       const targetUrl = 'https://hourlypricing.comed.com/api?type=5minutefeed'; 
@@ -16,10 +18,12 @@
 
       fetch(proxyUrl + targetUrl) 
         .then(response => response.json())
-        .then(val => console.log(val[0].millisUTC, val[0].price))
+        .then(data => time = data[0].millisUTC, price = data[0].price)
         
         
         .catch(error => console.error('Error fetching data:', error));
+      document.getElementById('time').innerHTML = time;
+      document.getElementById('price').innerHTML = price;
     </script>
   </body>
 </html>
