@@ -5,11 +5,13 @@
     <title>Fetch API Data</title>
   </head>
   <body>
-    <div>Trial 10</div>
+    <div>Trial 11</div>
     <!-- keys (millisUTC, price)  -->
     <script>
       const proxyUrl = 'https://corsproxy.io/?key=a809c415&url=';
       const targetUrl = 'https://hourlypricing.comed.com/api?type=5minutefeed'; 
+      var price;
+      var time;
       
 
       fetch(proxyUrl + targetUrl) 
